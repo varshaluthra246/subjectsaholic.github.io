@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mini-project4.css" />
+    <title>Mini-project 4</title>
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            <p>
+                <h3 style="text-align: center; font-weight: bold;">Pass the message</h3>
+            <p style="border-bottom: 2px solid rgba(211,211,211,0.5);"></p>
+            </p>
+
+            <p><label for="message-input">Enter a message</label><br>
+            <button>Message</button>
+            <input  type="text" id="message-input"></p>
+            
+            <p><button onclick = "getMessage()">Submit</button></p>
+
+            <p id="message-output" style="text-align: center; color: red; text-transform: uppercase;">abcgdhdbhs</p>
+        </div>
+    </div>
+
+    <script>
+        const messageInput = document.getElementById("message-input");
+
+        /*messageInput.addEventListener("keydown", function(event){
+            if(event.key  == "Enter")
+            getMessage();
+        })*/
+        
+        function getMessage(){
+            document.getElementById("message-output").innerHTML = messageInput.value;
+            messageInput.value = "";
+        }
+    </script>
+</body>
+</html>
